@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space accesories</title>
+    <link rel="shortcut icon" href="image/logo2.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">   
+    <link rel="stylesheet" href="space.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="nav-logo border">
+               
+                <div class="logo">
+
+                </div>
+                <p id="logo-text">SataMart</p>
+            </div>
+
+
+            <div class="nav-adress border">
+                <p class="add-first">Delivar to</p>
+                <div class="add-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p class="add-sec">Bangladesh</p>
+                </div>
+            </div>
+
+             
+            <div class="nav-search">
+                <select class="search-select">
+                    <option>All</option>
+                    <option>Arts & Crafts</option>
+                    <option>Beauty & personal care</option>
+                    <option>Automative</option>
+                    <option>Sports</option>
+                    <option>Electronics</option>
+                    <option>Computer & accesories</option>
+                    <option>Helath & Household</option>
+                    <option>Kitchen items</option>
+                    <option>Fashion</option>
+                    <option>Movie & Music</option>
+                </select>
+                <input placeholder="Search SataMart" class="search-input">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+
+
+            <div class="nav-lang border">
+                <i class="fa-solid fa-flag-usa"></i>
+                <select name="" id="lang-select">
+                    <option value="">EN</option>
+                    <option value="">BAN</option>
+                </select>
+            </div>
+
+            <div class="nav-signin border">
+                <p><span><a href="sign-in.html">Hello, sign in</a></span></p>
+                <p class="nav-second"><a href="sign-in.html">Account & ListsS</a></p>
+            </div>
+
+            <div class="nav-signin border">
+                <p><span>Returns</span></p>
+                <p class="nav-second">& Orders</p>
+            </div>
+
+            <div class="nav-cart border" onclick="toggleCart()">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <div id="cart-count">0</div>
+                Cart
+            </div>
+
+        </div>
+
+        <!-- Cart -->
+    <div class="cart-container" id="cart-container">
+        <h2>Shopping Cart</h2>
+        <ul id="cart-list"></ul>
+        <p id="total-price">Total: $0</p>
+        
+        <div class="cart-buttons">
+            <button class="close-button" onclick="toggleCart()">Close</button>
+            <button class="checkout-button">Checkout</button>
+        </div>
+    </div>
+<!--checkout-->
+    <div class="checkout-section hidden">
+        <h1>Shipping Address</h1>
+        <form id="address-form" class="form-column">
+          <div class="input-group">
+            <label for="first-name">First Name: </label>
+            <input type="text" id="first-name" placeholder="First Name" required>
+          </div>
+          <div class="input-group">
+            <label for="last-name">Last Name: </label>
+            <input type="text" id="last-name" placeholder="Last Name" required>
+          </div>
+          <div class="input-group">
+            <label for="phone-number">Phone Number: </label>
+            <input type="tel" id="phone-number" placeholder="Phone Number">
+          </div>
+          <div class="input-group">
+            <label for="address">Address: </label>
+            <input type="text" id="address" placeholder="Address" required>
+          </div>
+        </form>
+    
+        <h3 style="margin-top: 10px;">Order Summary</h3>
+        <ul style="list-style-type: none; margin-top: 10px;">
+          <li style="margin-bottom: 5px;">Subtotal: $<span style="font-size: large;" id="subtotal"></span></li>
+          <li>Delivery Charge: $<span style="font-size: large;" id="delivery-charge"></span></li>
+        </ul>
+        <hr style="border-top: 1px solid gray; margin-bottom: 10px; margin-top: 5px;">
+        <li style="list-style-type: none"><strong style="margin-left: 40px;">Total: $<span style="font-size: large;" id="total"></span></strong></li>
+    
+        <div class="button-group" style="margin-top: 10px;">
+          <button type="button" class="place-order" disabled><a style="text-decoration: none;color: white;" href="payment.html">Place Order</a></button>
+          <button type="button" class="cancel-button">Cancel</button>
+        </div>
+      </div>
+    
+
+
+
+        <div class="panel">
+            <div class="panel-all border">
+                <i class="fa-solid fa-bars"></i>
+                <p>All</p>
+            </div>
+            <div class="panel-ops">
+                <p class="border">Today's Deals</p>
+                <p class="border">Registry</p>
+                <p class="border">Customer Service</p>
+                <p class="border">Gift Cards</p>
+                <p class="border">sell</p>
+            </div>
+        </div> 
+
+
+    </header>
+    <div class="shop-section">
+        <div class="box2 box">
+            <div class="box-content">
+                <h2><span style="color: rgb(185, 123, 22);font-size: larger;">Wooden </span>Dining</h2>
+                <div class="box-img" style="background-image: url(image/boxe4.1.jpg);"></div>
+                <p>Best Dinning Products</p>
+                <h3>$648</h3>
+                <button onclick="addToCart('Dinning items', 648)">Add to Cart</button>
+                
+            </div>
+
+        </div>
+        <div class="box2 box">
+            <div class="box-content">
+                <h2><span style="color: rgb(255, 116, 2);font-size: larger;">Cloths </span>Sliky Threads</h2>
+                <div class="box-img" style="background-image: url(image/box1_image.jpg);"></div>
+                <p>Best cloths for wear</p>
+                <h3>$800</h3>
+                <button onclick="addToCart('Cloths items', 800)">Add to Cart</button>
+               
+            </div>
+
+        </div>
+        <div class="box2 box">
+            <div class="box-content">
+                <h2><span style="color: rgb(100, 138, 167);font-size: larger;">Kitchen </span>Products</h2>
+                <div class="box-img" style="background-image: url(image/boxe4.3.jpg);"></div>
+                <p>Best kitchen product 50 days warranty</p>
+                <h3>$312</h3>
+                <button onclick="addToCart('Kitchen items', 312)">Add to Cart</button>
+                
+            </div>
+
+        </div>
+        <div class="box2 box">
+            <div class="box-content">
+                <h2><span style="color: rgb(159, 22, 183);font-size: larger;">Shampoo </span>For Hair</h2>
+                <div class="box-img" style="background-image: url(image/boxe4.4.jpg);"></div>
+                <p>Best shampoo for hair</p>
+                <h3>$99</h3>
+                <button onclick="addToCart('shampoo', 99)">Add to Cart</button>
+                
+            </div>
+
+        </div>
+    </div>
+    <div class="foot-panel3">
+        <div class="f-logo">
+
+        </div>
+    </div>
+    <footer>
+        <div class="links">
+            <a href="#">Conditions of Use</a>
+            <a href="#"> Privacy Notice </a>
+            <a href="#">Help</a>
+        </div>
+        <p>© 1996-2023, SataMart.com, Inc. or its affiliates</p>
+    </footer>
+    <script src="cart.js"></script>
+    
+</body>
+</html>

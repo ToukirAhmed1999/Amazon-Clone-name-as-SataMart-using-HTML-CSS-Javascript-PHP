@@ -1,0 +1,474 @@
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    border: border-box;
+}
+.navbar{
+    height: 60px;
+    background-color: #155f40;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.nav-logo{
+    height: 60px;
+    width: 150px;
+    padding-left: 8px;
+    display: flex;
+
+}
+#logo-text{
+    font-size: 1.5rem;
+    color: rgba(216, 216, 13, 0.751);
+    font-weight: 900;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   align-items: center;
+   padding-top: 10%;
+   padding-right: 2px;
+}
+.logo{
+    
+    background-image: url("image/logo2.png");
+    background-size: cover;
+    height: 60px;
+    width: 40%;
+}
+.border{
+    border: 2px solid transparent;
+}
+.border:hover{
+    border: 2px solid white ;
+}
+/** second box............................**/
+.add-first{
+    color: #cccccc;
+    font-size: 0.5rem;
+    margin-left: 15px;
+}
+.add-sec{
+    color: #ffffff;
+    font-size: 1rem;
+    margin-left: 3px;
+}
+.add-icon{
+    display: flex;
+    align-items: center;
+    
+}
+.nav-adress{
+    padding-left: 8px;
+}
+
+/**box 3**/
+
+.nav-search{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(220, 194, 198);
+    width: 620px;
+    height: 40px;
+    border-radius: 4px;
+    
+}
+textarea:focus, input:focus{
+    outline: none;
+}
+.search-select{
+    background-color: #f3f3f3;
+    width: 50px;
+    text-align: center;
+    border-top-left-radius:4px;
+    border-bottom-left-radius:4px; 
+    border: none;
+}
+.search-input{
+    width: 100%;
+    border: none;
+    font-size: 1rem;
+}
+.search-icon{
+    width: 45px;
+    color: #0f1111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    border-top-right-radius: 4px ;
+    border-bottom-right-radius: 4px ;
+}
+.search-icon:hover{
+    background-color: pink;
+}
+#lang-select{
+    border: none;
+    background-color: #155f40;
+    color: #f3f3f3;
+    font-weight: 800;
+
+}
+.nav-search:hover{
+    border: 2.5px solid pink;
+}
+.nav-signin a{
+    text-decoration: none;
+    color: white;
+}
+/** box-4  **/
+
+span{
+    font-size: 0.7rem;
+}
+.nav-second{
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+/** box -6**/
+.nav-cart i{
+    font-size: 30px;
+}
+.nav-cart{
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+#cart-count {
+    position: absolute;
+    top: 5px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cart-container {
+    position: fixed;
+    right: -300px;
+    height: auto;
+    width: 300px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: right 0.3s ease, opacity 0.3s ease; /* Add opacity transition */
+    z-index: 1;
+    overflow-y: auto;
+    opacity: 0; /* Set initial opacity to 0 */
+}
+
+.cart-container.visible {
+    opacity: 1; /* Set opacity to 1 when the cart is visible */
+    right: 0;
+}
+
+.cart-container h2 {
+    color: #333;
+}
+
+#cart-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#cart-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+#cart-list li button {
+    background-color: #ff6666;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#cart-list li button:hover {
+    background-color: #ff4d4d;
+}
+
+#total-price {
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+}
+
+.cart-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.cart-buttons button {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+}
+
+.cart-buttons button.close-button {
+    background-color: #ff6666;
+}
+
+.cart-buttons button:hover {
+    background-color: #45a049;
+}
+
+/* Add styles for + and - buttons inside the cart */
+.cart-item-buttons button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.cart-item-buttons button:hover {
+    background-color: #45a049;
+}
+
+/** Panel...**/
+.panel{
+    height: 40px;
+    background-color: #108a57;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-left:20px;
+    
+}
+.panel p{
+    display: inline;
+}
+.panel-all{
+     
+}
+.panel-ops p{
+    display: inline;
+    margin-right: 15px;
+}
+.panel-ops{
+    width: 92%;
+}
+/***shop-section**/
+.shop-section{
+    display:flex;
+    justify-content: space-evenly;
+    background-color: rgb(231, 169, 190);   
+}
+.box{
+    
+    height: 400px;
+    width: 24%;
+    background-color: white;
+    padding: 20px 0px 15px;
+    margin-top: 15px;
+    box-shadow: 2px 2px 50px 2px rgba(15, 15, 15, 0.555);
+   
+    
+}
+.box:hover{
+    background-color: rgb(248, 204, 211);
+}
+.box h2{
+    padding-left: 10px;
+    padding-top: 2px;
+}
+.box-img{
+    height: 240px;
+    background-size: cover;
+    margin-top: 1rem;
+    margin-bottom: 1.4rem;
+}
+.box-img:hover{
+    height: 280px;
+    width: 110%;
+}
+.box-content{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.box-content button{
+    height: 31px;
+    width: 88px;
+    margin-top: 10px;
+    margin-right: 50px;
+    background-color: #f04ebf;
+    border: 1px solid #fffdfd;
+    border-top-color:#fffdfd ;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+.box-content button:hover{
+    background-color: #663455;
+}
+.box-content h3{
+    margin-top: 7px;
+}
+
+/***checkout********/
+      .hidden {
+    display: none;
+  }
+  
+  .checkout-section {
+    background-color: #f3dbe6; /* Pink background color */
+    padding: 20px;
+    border-radius: 5px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 400px; /* Increased height */
+    box-shadow: 5px 5px 10px 10px rgba(53, 15, 15, 0.2);
+  }
+  
+  .checkout-section h1 {
+    color: rgb(11, 37, 29);
+  }
+  
+  .form-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .input-group label {
+    width: 140px;
+    font-weight: bold;
+    text-align: right;
+  }
+  
+  .input-group input {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .button-group button {
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+  }
+  
+  .place-order {
+    background-color: #0b0d0c;
+    color: #93f608
+  }
+    .place-order:hover {
+    background-color: #5c5440;
+  }
+  
+  .cancel-button {
+    background-color: #ddd;
+    color: #333;
+  }
+  
+  .cancel-button:hover {
+    background-color: #b69191;
+  }
+  
+  /* Additional styles for form inputs */
+  .input-group input:focus {
+    border-color: #007bff;
+  }
+  
+  .input-group input::placeholder {
+    color: #af9292;
+  }
+  
+  /* Additional styles for button group */
+  .button-group {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  /* Additional styles for Order Summary */
+  .order-summary li {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: normal;
+  
+    
+  }
+  
+  .total {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+
+/***footer****/
+.foot-panel3{
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: -120px;
+
+}
+.f-logo{
+    background-image: url("image/logo2.png");
+    background-size: cover;
+    height: 50px;
+    width: 10%;
+    
+
+}
+footer{
+    margin-top: 80px;
+    
+}
+footer .links{
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    margin: 25px auto 15px auto;
+}
+footer .links a{
+ font-size: 12px;
+ text-decoration: none;
+}
+footer::before{
+ content: "";
+ display: flex;
+ justify-content: center;
+ width: 80%;
+ margin: auto;
+ height: 44px;
+ margin-top: -35px;
+ border-top: 1px solid transparent;
+ box-shadow: 0 10px 15px -20px #333 ;
+}
+footer p{
+ font-size: 11px;
+ color: #555;
+ text-align: center;
+}

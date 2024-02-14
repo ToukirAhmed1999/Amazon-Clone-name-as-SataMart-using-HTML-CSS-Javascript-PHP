@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment Gateway</title>
+<link rel="shortcut icon" href="image/logo2.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.card {
+    width: 150px;
+    height: 100px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.card:hover{
+    opacity: 0.8;
+    border: 5px solid black;
+}
+.card img {
+    width: 150px;
+    height: auto;
+}
+
+.card.selected {
+    border-color: #008000;
+}
+
+.checkmark {
+    display: none;
+    font-size: 20px;
+    color: #008000;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.card.selected .checkmark {
+    display: block;
+}
+
+.pay-button {
+    background-color: #008000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 50px;
+    margin-left: 50%;
+    
+}
+
+.pay-button:hover {
+    background-color: #43c443;
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+    <h1 style="margin-bottom: 140px; border: 2px solid rgb(66, 61, 61); width: 20%;background-color: rgb(232, 116, 211);border-radius: 8px;color: rgb(0, 0, 0);height: 80px;text-align: center;padding-top: 11px;">Choose your payment method:</h1>
+    <div class="card-grid">
+        <div class="card" data-method="visa">
+            <img src="image/visa.jpeg" alt="visa">
+            <i class="fas fa-check checkmark"></i>
+        </div>
+        <div class="card" data-method="mastercard">
+            <img src="image/master.jpeg" alt="Mastercard">
+            <i class="fas fa-check checkmark"></i>
+        </div>
+        <div class="card" data-method="amex">
+            <img src="image/bkash.png" alt="American Express">
+            <i class="fas fa-check checkmark"></i>
+        </div>
+        <div class="card" data-method="paypal">
+            <img src="image/nagad.png" alt="PayPal">
+            <i class="fas fa-check checkmark"></i>
+        </div>
+        <div class="card" data-method="apple-pay">
+            <img src="image/rocket.jpeg" alt="Apple Pay">
+            <i class="fas fa-check checkmark"></i>
+        </div>
+        <div class="card" data-method="google-pay">
+            <img src="image/ssl.png" alt="Google Pay">
+            <i class="fas fa-check checkmark"></i>
+        </div>
+        <div class="card" data-method="other">
+            <img src="image/cod.png" alt="">
+            <i class="fas fa-check checkmark"></i>
+        </div>
+    </div>
+    <button class="pay-button"><a style="text-decoration: none; color: white;"href="demo3.html">Pay Now</a></button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
